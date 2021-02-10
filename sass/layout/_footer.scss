@@ -1,0 +1,19 @@
+.mainFooter{    
+    padding: 26px; 
+    background-color: $brand-grey3;
+    color: $brand-light;
+    display: flex;
+    flex-direction: column;
+
+    h1{
+        margin-bottom: 22px;
+    }
+
+    .fas{
+        margin-right: 12px;
+    }
+
+    a{
+        margin-bottom: 15px;
+    }
+}
