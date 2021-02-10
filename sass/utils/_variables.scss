@@ -4,8 +4,12 @@ $brand-primary: #9356DC;
 $brand-secondary: #FF79DA;
 $brand-tertiary : #99E2D0;
 
-$brand-light: #ffffff;
+$brand-primary-light: lighten($brand-primary, 35%);
 
+$brand-light: #ffffff;
+$brand-grey1: #F6F6F6;
+$brand-grey2: #EAEAEA;
+$brand-grey3: #353535;
 $brand-text: #000000;
 
 // Screen width

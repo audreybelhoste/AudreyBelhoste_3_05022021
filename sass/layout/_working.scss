@@ -1,0 +1,51 @@
+.working{
+    padding: 60px 20px;
+
+    &__title{
+        margin: 0 0 20px;
+    }
+
+    &__wrapper{
+        counter-reset: step;
+    }
+
+    &__item{
+        padding: 35px; 
+        background-color: $brand-grey1;
+        border-radius: 20px;
+        margin: 0 0 20px 12px;
+        box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.2);
+        counter-increment: step;
+        position: relative;
+
+        @extend .font-bold;
+
+        &::before{
+            content: counter(step);
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(-50%, -50%);
+            width: 24px;
+            height: 24px;
+            color: $brand-light; 
+            background-color: $brand-primary;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fas{
+            margin-right: 20px;
+        }
+
+        &:nth-child(3){
+            background-color: $brand-primary-light;
+
+            .fas{
+                color: $brand-primary;
+            }
+        }
+    }
+}
