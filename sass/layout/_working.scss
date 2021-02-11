@@ -3,10 +3,30 @@
 
     &__title{
         margin: 0 0 20px;
+        
+        @include tablet{
+            max-width: 500px;
+            margin: 0 auto 20px;
+        }
+
+        @include laptop{
+            max-width: 1300px;
+        }
     }
 
     &__wrapper{
         counter-reset: step;
+
+        @include tablet{
+            max-width: 500px;
+            margin: auto;
+        }
+
+        @include laptop{
+            max-width: 1300px;
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
     &__item{
@@ -19,6 +39,10 @@
         position: relative;
 
         @extend .font-bold;
+
+        @include laptop{
+            width: calc(33% - 30px);
+        }
 
         &::before{
             content: counter(step);

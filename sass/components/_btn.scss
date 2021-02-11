@@ -4,6 +4,31 @@
     background: linear-gradient($brand-secondary, $brand-primary);
     text-decoration: none;
     color: $brand-light;
-    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.2);
     display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
+
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;  
+        left: 0;
+        border-radius: 20px;
+        background: linear-gradient(lighten($brand-secondary, 4), lighten($brand-primary, 4));
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 0.3s;
+    }
 }

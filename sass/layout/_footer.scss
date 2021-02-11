@@ -2,18 +2,43 @@
     padding: 26px; 
     background-color: $brand-grey3;
     color: $brand-light;
-    display: flex;
-    flex-direction: column;
 
-    h1{
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+
+        @include laptop{
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+    }
+
+    &__title{
         margin-bottom: 22px;
+        font-size: 20px;
+
+        @extend .font-shrikhand;
     }
 
     .fas{
-        margin-right: 12px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
     }
 
-    a{
+    &__link{
         margin-bottom: 15px;
+        text-decoration: none;
+        color: $brand-light;
+        position: relative;
+
+        &--icon{
+            padding-left: 25px;
+        }
+
+        &:hover{
+            text-decoration: underline;
+        }
     }
 }

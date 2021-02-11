@@ -2,23 +2,50 @@
     background-color: $brand-grey1;
     padding: 60px 20px;
 
+    &__title{
+        @include laptop{
+            max-width: 1300px;
+            margin: 0 auto 20px;
+        }
+    }
+
+    &__wrapper{
+        @include laptop{
+            max-width: 1300px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+
     &__card{
         position: relative;
         display: block;
         margin-bottom: 18px;
-        box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        overflow: hidden;
+        text-decoration: none;
+        color: $brand-text;
+        transition: all 0.3s ease;
+
+        @include laptop{
+            min-width: calc(50% - 20px);
+        }
         
         &:last-child{
             border-bottom: 0;
         }
 
+        &:hover{
+            box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+        }
+
         &__picture{
-            width: 100%;
             height: 175px;
             position: relative;
             margin: 0;
-            border-radius: 15px 15px 0 0;
-            overflow: hidden;
     
             img{
                 width: 100%; 
@@ -33,7 +60,6 @@
         &__description{
             padding: 20px 15px; 
             background-color: $brand-light;
-            border-radius: 0 0 15px 15px;
             position: relative;
 
             h4{
@@ -61,6 +87,18 @@
             position: absolute;
             top: 23px;
             right: 23px;
+
+            &:hover{
+                .far{
+                    opacity: 0;
+                }
+            }
+        }
+
+        .fas{
+            background: -webkit-linear-gradient($brand-secondary, $brand-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
 }
