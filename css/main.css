@@ -5083,6 +5083,37 @@ h3 {
         margin: 0 0 8px; }
       .restaurant__card__description p {
         margin: 0; }
+      .restaurant__card__description__like {
+        height: 22px;
+        width: 22px;
+        position: absolute;
+        top: 23px;
+        right: 23px;
+        background-color: transparent;
+        border: transparent 0px solid;
+        background-color: #000000; }
+        .restaurant__card__description__like:hover::before {
+          opacity: 1; }
+        .restaurant__card__description__like:hover .unlike {
+          opacity: 0; }
+        .restaurant__card__description__like::before {
+          content: "";
+          opacity: 0;
+          transition: all 0.3s ease;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: linear-gradient(#9356DC, #FF79DA); }
+        .restaurant__card__description__like .fa-heart {
+          background-color: #ffffff;
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-size: 22px;
+          mix-blend-mode: lighten;
+          transition: all 0.3s ease; }
     .restaurant__card__tag {
       position: absolute;
       top: 12px;
@@ -5092,17 +5123,6 @@ h3 {
       background-color: #99E2D0;
       margin: 0;
       border-radius: 2px; }
-    .restaurant__card .fa-heart {
-      font-size: 22px;
-      position: absolute;
-      top: 23px;
-      right: 23px; }
-      .restaurant__card .fa-heart:hover .far {
-        opacity: 0; }
-    .restaurant__card .fas {
-      background: -webkit-linear-gradient(#FF79DA, #9356DC);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; }
 
 .mainFooter {
   padding: 26px;
