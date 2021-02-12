@@ -1,0 +1,25 @@
+.location{
+    background-color: $brand-grey2;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    z-index: 1;
+
+    .fa-map-marker-alt{
+        margin-right: 10px;
+    }
+}
+
+.description{
+    background-color: $brand-grey1;
+    text-align: center;
+    padding: 30px 20px;
+
+    &__title{
+        font-size: 20px;
+        max-width: 230px;
+        margin: auto;
+
+        @extend .font-roboto, .font-bold;
+    }
+}

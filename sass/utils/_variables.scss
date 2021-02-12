@@ -1,0 +1,26 @@
+// Colors
+
+$brand-primary: #9356DC;
+$brand-secondary: #FF79DA;
+$brand-tertiary : #99E2D0;
+
+$brand-primary-light: lighten($brand-primary, 35%);
+$brand-tertiary-dark: darken($brand-tertiary, 35%);
+
+$brand-light: #ffffff;
+$brand-grey1: #F6F6F6;
+$brand-grey2: #EAEAEA;
+$brand-grey3: #353535;
+$brand-text: #000000;
+
+// Screen width
+$max-xxs: 359px;
+$min-xs: 480px;
+$max-xs: 767px;
+$min-sm: 768px;
+$max-sm: 991px;
+$min-md: 992px;
+$max-md: 1199px;
+$min-lg: 1200px;
+$max-lg: 1319px;
+$min-hu: 1320px;
