@@ -8,4 +8,19 @@
     img{
         height: 30px;
     }
+
+    &__back{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 24px;
+
+    }
+
+    &__title{
+        margin: 0;
+        font-size: 22px;
+
+        @extend .font-shrikhand;
+    }
 }

@@ -4903,9 +4903,9 @@ template {
 
 .font-roboto, html, body, .description__title {
   font-family: 'Roboto', sans-serif; }
-.font-shrikhand, h1, h2, .mainFooter__title {
+.font-shrikhand, h1, h2, .mainHeader__title, .mainFooter__title {
   font-family: 'Shrikhand', cursive; }
-.font-regular, html, body {
+.font-regular, html, body, .menu__bloc__title {
   font-weight: 400; }
 .font-bold, .description__title, .working__item {
   font-weight: 700; }
@@ -4931,10 +4931,12 @@ h3 {
   text-decoration: none;
   color: #ffffff;
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.2);
-  display: inline-block;
+  display: block;
+  width: fit-content;
   position: relative;
   z-index: 1;
-  transition: all 0.3s ease; }
+  transition: all 0.3s ease;
+  margin: 0 auto; }
   .btn:hover {
     box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.35); }
     .btn:hover::after {
@@ -4952,6 +4954,39 @@ h3 {
     z-index: -1;
     transition: opacity 0.3s; }
 
+.like {
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  background-color: transparent;
+  border: transparent 0px solid;
+  background-color: #000000;
+  cursor: pointer; }
+  .like:hover::before {
+    opacity: 1; }
+  .like:hover .like__full {
+    opacity: 0; }
+  .like::before {
+    content: "";
+    opacity: 0;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#9356DC, #FF79DA); }
+  .like .fa-heart {
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 22px;
+    mix-blend-mode: lighten;
+    transition: all 0.3s ease; }
+
 .mainHeader {
   padding: 15px 0 10px;
   box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
@@ -4960,6 +4995,14 @@ h3 {
   position: relative; }
   .mainHeader img {
     height: 30px; }
+  .mainHeader__back {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 24px; }
+  .mainHeader__title {
+    margin: 0;
+    font-size: 22px; }
 
 .location {
   background-color: #EAEAEA;
@@ -5083,37 +5126,6 @@ h3 {
         margin: 0 0 8px; }
       .restaurant__card__description p {
         margin: 0; }
-      .restaurant__card__description__like {
-        height: 22px;
-        width: 22px;
-        position: absolute;
-        top: 23px;
-        right: 23px;
-        background-color: transparent;
-        border: transparent 0px solid;
-        background-color: #000000; }
-        .restaurant__card__description__like:hover::before {
-          opacity: 1; }
-        .restaurant__card__description__like:hover .unlike {
-          opacity: 0; }
-        .restaurant__card__description__like::before {
-          content: "";
-          opacity: 0;
-          transition: all 0.3s ease;
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
-          background: linear-gradient(#9356DC, #FF79DA); }
-        .restaurant__card__description__like .fa-heart {
-          background-color: #ffffff;
-          position: absolute;
-          top: 0;
-          left: 0;
-          font-size: 22px;
-          mix-blend-mode: lighten;
-          transition: all 0.3s ease; }
     .restaurant__card__tag {
       position: absolute;
       top: 12px;
@@ -5152,5 +5164,100 @@ h3 {
       padding-left: 25px; }
     .mainFooter__link:hover {
       text-decoration: underline; }
+
+.menu {
+  background-color: #F6F6F6;
+  padding-bottom: 58px; }
+  .menu__picture {
+    width: 100%;
+    height: 260px;
+    position: relative;
+    margin: 0; }
+    .menu__picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0; }
+  .menu__title {
+    background-color: #F6F6F6;
+    position: relative;
+    padding: 40px 20px;
+    border-radius: 40px 40px 0 0;
+    top: -40px; }
+    .menu__title h1 {
+      font-size: 22px; }
+  .menu .like {
+    top: 40px;
+    right: 38px; }
+  .menu .fa-heart {
+    background-color: #F6F6F6; }
+  .menu__bloc {
+    position: relative;
+    top: -40px;
+    padding: 0 20px 47px; }
+    .menu__bloc:last-child {
+      padding: 0 20px 7px; }
+    .menu__bloc__title {
+      text-transform: uppercase;
+      position: relative;
+      margin: 0 0 27px; }
+      .menu__bloc__title::after {
+        content: "";
+        background-color: #99E2D0;
+        height: 3px;
+        width: 40px;
+        position: absolute;
+        bottom: -10px;
+        left: 0; }
+    .menu__bloc__item {
+      display: flex;
+      align-items: flex-end;
+      padding: 16px 24px 16px 12px;
+      background-color: #ffffff;
+      margin-bottom: 15px;
+      box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      overflow: hidden;
+      position: relative; }
+      .menu__bloc__item:last-child {
+        margin-bottom: 0; }
+      .menu__bloc__item:hover {
+        padding: 16px 80px 16px 12px; }
+        .menu__bloc__item:hover .menu__bloc__item__check {
+          right: 0; }
+        .menu__bloc__item:hover .fa-check-circle {
+          transform: rotate(360deg); }
+      .menu__bloc__item__text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        flex: 1; }
+        .menu__bloc__item__text p {
+          margin: 0 0 12px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+          .menu__bloc__item__text p:last-child {
+            margin: 0; }
+      .menu__bloc__item__price {
+        margin: 0 0 0 15px; }
+      .menu__bloc__item__check {
+        background-color: #99E2D0;
+        position: absolute;
+        top: 0;
+        right: -60px;
+        width: 60px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease; }
+        .menu__bloc__item__check .fa-check-circle {
+          color: #ffffff;
+          font-size: 22px;
+          transition: all 0.5s ease; }
 
 /*# sourceMappingURL=main.css.map */

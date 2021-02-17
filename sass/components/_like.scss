@@ -1,0 +1,44 @@
+.like{
+    height: 22px; 
+    width: 22px; 
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    background-color: transparent;
+    border: transparent 0px solid;
+    background-color: $brand-text;
+    cursor: pointer;
+
+    &:hover{
+        &::before{
+            opacity: 1;
+        }
+
+        .like__full{
+            opacity: 0;
+        }
+    }
+    
+
+    &::before{
+        content: "";
+        opacity: 0;
+        transition: all 0.3s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient($brand-primary, $brand-secondary);
+    }
+
+    .fa-heart{
+        background-color: $brand-light;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 22px;
+        mix-blend-mode: lighten;
+        transition: all 0.3s ease;
+    }
+}
