@@ -5,10 +5,11 @@
     text-decoration: none;
     color: $brand-light;
     box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.2);
-    display: inline-block;
+    display: table;
     position: relative;
     z-index: 1;
     transition: all 0.3s ease;
+    margin: 0 auto;
 
     &:hover {
         box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
