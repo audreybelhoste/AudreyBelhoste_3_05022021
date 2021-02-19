@@ -3,8 +3,3 @@
 *:after {
   box-sizing: border-box;
 }
-
-*::selection{
-  background: $brand-primary;
-  color: $brand-secondary;
-}
