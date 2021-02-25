@@ -4897,13 +4897,13 @@ template {
 *:after {
   box-sizing: border-box; }
 
-.font-roboto, html, body, .description__title {
+.font-roboto, html, body, .hero__description__title {
   font-family: 'Roboto', sans-serif; }
 .font-shrikhand, h1, h2, .mainHeader__title, .mainFooter__title {
   font-family: 'Shrikhand', cursive; }
 .font-regular, html, body, .menu__bloc__title {
   font-weight: 400; }
-.font-bold, .description__title, .working__item {
+.font-bold, .hero__description__title, .working__item {
   font-weight: 700; }
 .font-italic {
   font-style: italic; }
@@ -5002,20 +5002,19 @@ h3 {
     margin: 0;
     font-size: 22px; }
 
-.location {
+.hero__location {
   background-color: #EAEAEA;
   text-align: center;
   margin: 0;
   padding: 20px;
   z-index: 1; }
-  .location .fa-map-marker-alt {
+  .hero__location .fa-map-marker-alt {
     margin-right: 10px; }
-
-.description {
+.hero__description {
   background-color: #F6F6F6;
   text-align: center;
   padding: 30px 20px; }
-  .description__title {
+  .hero__description__title {
     font-size: 20px;
     max-width: 230px;
     margin: auto; }
