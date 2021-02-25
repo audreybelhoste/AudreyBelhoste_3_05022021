@@ -1,18 +1,31 @@
+// Utils
+@import 'utils/variables';
+@import 'utils/mixins';
+
+// Vendors
 @import 'vendors/fontawesome/fontawesome';
 @import 'vendors/fontawesome/solid';
 @import 'vendors/fontawesome/regular';
 @import 'vendors/normalize';
-@import 'utils/variables';
-@import 'utils/mixins';
+
+// Base
 @import 'base/base';
 @import 'base/fonts';
 @import 'base/typography';
+
+// Components
 @import 'components/btn';
 @import 'components/like';
+
+// Layout
 @import 'layout/header';
-@import 'layout/description';
+@import 'layout/hero';
 @import 'layout/working';
 @import 'layout/restaurant';
 @import 'layout/footer';
 @import 'layout/menu';
 @import 'layout/loader';
+
+// Pages
+
+// Themes
